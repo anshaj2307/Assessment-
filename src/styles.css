@@ -1,0 +1,377 @@
+/* styles.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3ef;
+  height: 100vh;
+  display: flex;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.container {
+  width: 174%;
+  max-width: 12000px;
+  background: linear-gradient(to right, #dfdede, #fbf9a2);
+  border-radius:40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #010404;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 25px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 10px 20px;
+  justify-content: right;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin: 0 5px;
+}
+
+.nav button:hover {
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-item {
+  margin: 0px;
+}
+
+.filter-item select, .search-container input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.filter-item select:focus, .search-container input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.search-container {
+  position: relative;
+  border-radius:40px;
+  width: auto;
+  flex-grow: 1;
+  padding-bottom: 9px;
+}
+
+.search-container input {
+  width: 55%;
+  padding: 12px 20px 12px 40px; /* Space for icon */
+  border-radius: 30px;
+  border: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: #070707;
+  transition: background-color 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  padding-bottom: 9px;
+  opacity: 0.5;
+}
+
+
+
+/* Toggle Styles */
+.status-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  padding-bottom: 9px;
+}
+
+.toggle-button {
+  width: 60px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 15px;
+  position: relative;
+  margin-right: 10px;
+  margin-top: 7px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.toggle-button.neutral {
+  background-color: #666; /* Neutral for All */
+}
+
+.toggle-button.active {
+  background-color: #34d399; /* Green for Active */
+}
+
+.toggle-button.inactive {
+  background-color: #f87171; /* Red for Inactive */
+}
+
+.toggle-circle {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button.neutral .toggle-circle {
+  transform: translateX(15px);
+}
+
+.toggle-button.active .toggle-circle {
+  transform: translateX(29px);
+}
+
+.toggle-button.inactive .toggle-circle {
+  transform: translateX(2px);
+}
+
+.table-container {
+  overflow-x: auto;
+  flex-grow: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.status.Active {
+  background-color: #34d399; /* Green for Active */
+  
+}
+
+.status.Inactive {
+  background-color: #f87171; /* Red for Inactive */
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  border-radius:40px;
+  background-color: #f8f9fa;
+  width: 60%;
+  padding-top: 9px;
+}
+
+.filters label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  
+  color: #555;
+  margin-bottom: 10px;
+  
+}
+
+.filters select, .filters input[type="checkbox"] {
+  margin-left: 5px;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid #979696;
+  border-radius: 15px;
+  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filters select:focus, .filters input[type="checkbox"]:focus {
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+  border-radius: 15px;
+}
+
+.table-container {
+  overflow-x: auto;
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+td {
+  border: none;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  color: #090909;
+  position: relative;
+  border: none;
+}
+
+th {
+  background-color: #f5f5f3;
+  color: #090909;
+  
+  font-weight: bold;
+  font-size: 14px;
+}
+
+tr {
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+tr:nth-child(even) {
+  background-color: #fcfcfa;
+  
+}
+
+tr:hover {
+  background-color: #f6e607;
+}
+
+.selected-row {
+  background-color: #fde68a;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.status.Active {
+  background-color: #22c55e;
+}
+
+.status.Inactive {
+  background-color: #f87171;
+}
+
+td:first-child, th:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border: none;
+}
+
+tr:last-child tbody:first-child, tr:last-child tbody:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border: none;
+}
+
+td:last-child, th:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: none;
+}
+
+td,.product_id{
+  border: none;
+}
+
