@@ -14,7 +14,7 @@ This is a simple React application to display a product table with filters for c
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/product-dashboard.git
+   git clone https://github.com/anshaj2307/Assessment-.git
    cd product-dashboard
 
 2. **Install dependencies:**
