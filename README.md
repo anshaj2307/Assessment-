@@ -19,8 +19,9 @@ This is a simple React application to display a product table with filters for c
 
 2. **Install dependencies:**
 
-npm install
-npm start
+    ```bash
+    npm install
+    npm start
 
 
 ## Open your browser:
