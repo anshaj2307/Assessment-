@@ -19,12 +19,12 @@ This is a simple React application to display a product table with filters for c
 
 2. **Install dependencies:**
 
-### npm install
-    Run the application:
+npm install
+    
 
+npm start
 
-### npm start
-Open your browser:
+## Open your browser:
 
 Navigate to http://localhost:3000 to view the application.
 
